@@ -77,6 +77,20 @@ public class MainActivity extends AppCompatActivity
             //call mergesort on the right and the left
             //HW: update the theListOfMergeSortCalls to show all of the individual calls we
             //make to mergesort
+            String oneHalf = "";
+            String secondHalf = "";
+
+            for (int i = 0; i < theList.size() / 2; i++)
+            {
+                oneHalf = oneHalf + theList.get(i) + " ";
+            }
+
+            for (int j = theList.size() / 2; j < theList.size(); j++)
+            {
+                secondHalf = secondHalf + theList.get(j) + " ";
+            }
+            this.theListOfMergeSortCalls.add(oneHalf);
+            this.theCallsToMergeSortAdapter.notifyDataSetChanged();
         }
     }
 
